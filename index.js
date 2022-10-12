@@ -72,7 +72,7 @@ async function run() {
             res.send(result);
 
         })
-        //move task to archive
+        //move task to archive collection
         app.put('/task/:id', verifyJWT, async (req, res) => {
             const id = req.params.id;
             const filter = { _id: ObjectId(id) };
